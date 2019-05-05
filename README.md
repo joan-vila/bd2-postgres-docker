@@ -35,10 +35,7 @@ NB: tutti i campi sono da completare senza apici
 Per controllare che tutto sia andato a buon fine, caricate nel browser la pagina localhost:5000.
 
 ## Credenziali
-è possibile eseguire il comando help tramite il file sh per ottenere le credenziali d'accesso di default:
-```sh
-sudo bash setup.sh -h
-``` 
+
 #### Credenziali PGADMIN4:
 Per eseguire l'accesso a PGADMIN4 utilizzate le seguenti credenziali:
 > id: base@didati2.it
