@@ -58,12 +58,13 @@ Dopo l'installazione tramite il file setup.sh è possibile trasferire file tra h
 ## Utilizzare PostgreSQL da linea di comando:
 Eseguire il seguente comando per accedere alla shell del container.
 ```sh
-$ sudo docker exec -it postgres_container bash
+$ docker exec -it postgres_container bash
 $ psql -U postgres
 ``` 
 
 ## Nota bene:
 Si è liberi di modificare il docker-compose.yml come meglio si preferisce.
+Le seguenti cartelle postgresFOLDER e pgadminFOLDER devono essere vuote e presenti durante l'installazione.
 ## Authors
 
 * **Andrea Bacciu**  [Github profile](https://github.com/andreabac3)
