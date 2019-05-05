@@ -9,12 +9,16 @@ Queste istruzioni permetteranno di installare Docker, e il container e di creare
 1. Una macchina con sistema operativo Unix o Windows 10.
 2. Bisogna avere i permessi di ***root*** e avere disponibile la porta 5000 e 5432.
 3. Bisogna installare docker e docker-compose e git, puoi seguire le istruzioni in base al tuo sistema operativo per installarlo  [docker.com](https://www.docker.com/)
-4. (SOLO PER WINDOWS USER - in caso di errore con i volumi) Eseguire il comando nella powershell:
+
+### Installazione tramite docker-compose
+4. Effettuare un git clone dal repository
+5. Se si é sotto Windows:
+5.1. Eseguire il comando nella powershell:
 ```sh
 $env:COMPOSE_CONVERT_WINDOWS_PATHS=1
-``` 
-### Installazione tramite docker-compose
-5. Effettuare un git clone dal repository
+```  
+5.2. Entrare nelle impostazioni di Docker, nella tab Shared Drives selezionare il disco su cui si sta installando il docker container.
+
 6. eseguire il seguente comando:
 ```sh
 $ docker-compose up -d 
