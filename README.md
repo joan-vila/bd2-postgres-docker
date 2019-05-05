@@ -12,15 +12,14 @@ Queste istruzioni permetteranno di installare Docker, e il container e di creare
 
 ### Installazione tramite docker-compose
 4. Effettuare un git clone dal repository
-5. Se si é sotto Windows eseguire 5 e 6, altrimenti passare a 7
-5. Eseguire il comando nella powershell:
+5. Se si é sotto Windows, eseguire il comando nella powershell:
 
 ```sh
 $env:COMPOSE_CONVERT_WINDOWS_PATHS=1
 ```  
-6. Entrare nelle impostazioni di Docker, nella tab Shared Drives selezionare il disco su cui si sta installando il docker container.
+6. Se si é sotto Windows. entrare nelle impostazioni di Docker, nella tab Shared Drives selezionare il disco su cui si sta installando il docker container.
 
-6. eseguire il seguente comando:
+6. Eseguire il seguente comando per iniziare il processo di installazione:
 ```sh
 $ docker-compose up -d 
 ``` 
