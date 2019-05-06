@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       PGDATA: /data/postgres
     volumes:
-       - ./postgresFOLDER:/data/postgres # to choose your personal directory, change only the left path. 
+       - ./postgresFOLDER:/tmp # to choose your personal directory, change only the left path. 
     ports:
       - "5432:5432" # to choose your personal port, change only the left port.
     networks:
