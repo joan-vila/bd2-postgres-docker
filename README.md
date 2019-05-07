@@ -63,7 +63,7 @@ $ psql -U postgres
 
 ## Nota bene:
 Si è liberi di modificare il docker-compose.yml come meglio si preferisce.
-Le seguenti cartelle postgresFOLDER e pgadminFOLDER devono essere vuote e presenti durante l'installazione.
+
 ## Authors
 
 * **Andrea Bacciu**  [Github profile](https://github.com/andreabac3)
