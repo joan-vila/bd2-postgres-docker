@@ -24,7 +24,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-base@didati2.it}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
     volumes:
-       - ./pgadminFOLDER:/root/.pgadmin # to choose your personal directory, change only the left path.
+       - ./pgadminFOLDER:/var/lib/pgadmin4 # to choose your personal directory, change only the left path.
     ports:
       - "5000:80"  # to choose your personal port, change only the left port.
     networks:
