@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       PGDATA: /data/postgres
     volumes:
-       - ./postgresFOLDER:/data/postgres # to choose your personal directory, change only the left path. 
+       - ./postgresData:/data/postgres # to choose your personal directory, change only the left path. 
     ports:
       - "5432:5432" # to choose your personal port, change only the left port.
     networks:
@@ -24,7 +24,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-base@didati2.it}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
     volumes:
-       - ./pgadminFOLDER:/var/lib/pgadmin4 # to choose your personal directory, change only the left path.
+       - ./pgadminData:/var/lib/pgadmin4 # to choose your personal directory, change only the left path.
     ports:
       - "5000:80"  # to choose your personal port, change only the left port.
     networks:

@@ -49,7 +49,7 @@ Per eseguire tramite linea di comando utilizzate le seguenti credenziali:
 > port: 5432
 
 ## Condividiere file tra il Docker e il File System host
-Per condividere file sql, file di configurazione e dump della base di dati è possibile utilizzare la cartella  ./postgresFOLDER 
+Per condividere file sql, file di configurazione e dump della base di dati è possibile utilizzare la cartella  ./postgresData 
 
 ## Eseguire query tramite pgadmin4
 È possibile eseguire query o file sql tramite l'interfaccia grafica di pgadmin4 con l'utilizzo del suo query editor.
