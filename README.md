@@ -6,31 +6,25 @@ Le seguenti istruzioni ti permetteranno di istanziare un Docker contenente il DB
 Queste istruzioni permetteranno di installare Docker, e il container e di creare una shared folder fra l'host e il docker.
 
 ### Prerequisiti
-1. Una macchina con sistema operativo Unix o Windows 10.
+1. Una macchina con sistema operativo Linux o MacOS. Attualmente Windows non è supportato.
 2. Bisogna avere i permessi di ***root*** e avere disponibile la porta 5000 e 5432.
-3. Bisogna installare docker e docker-compose e git, puoi seguire le istruzioni in base al tuo sistema operativo per installarlo  [docker.com](https://www.docker.com/)
+3. Docker, docker-compose e git installati. Per la procedura di installazione seguire le istruzioni in base al tuo sistema operativo per installarlo  [docker.com](https://www.docker.com/).
 
 ### Installazione tramite docker-compose
 4. Effettuare un git clone dal repository
-5. Se si é sotto Windows, eseguire il comando nella powershell:
 
-```sh
-$env:COMPOSE_CONVERT_WINDOWS_PATHS=1
-```  
-6. Se si é sotto Windows. entrare nelle impostazioni di Docker, nella tab Shared Drives selezionare il disco su cui si sta installando il docker container.
-
-6. Eseguire il seguente comando per iniziare il processo di installazione:
+5. Eseguire il seguente comando per iniziare il processo di installazione:
 ```sh
 $ docker-compose up -d 
 ``` 
-7. Eseguire l'accesso tramite il browser all'indirizzo localhost:5000
-8. Nella dashboard cliccare su 'Add new server'
-9. Nella tab 'General' nel campo Name scrivere 'postgres' 
-10. Cambiare tab e scegliere 'Connection'
-11. Nel campo Host name / address' scrivere 'postgres'
-12. Nel campo port se non presente scrivere 5432
-13. Nel campo Maintenance database scrivere 'postgres'
-14. Nel campo password scrivere 'postgres'
+6. Eseguire l'accesso tramite il browser all'indirizzo localhost:5000
+7. Nella dashboard cliccare su 'Add new server'
+8. Nella tab 'General' nel campo Name scrivere 'postgres' 
+9. Cambiare tab e scegliere 'Connection'
+10. Nel campo Host name / address' scrivere 'postgres'
+11. Nel campo port se non presente scrivere 5432
+12. Nel campo Maintenance database scrivere 'postgres'
+13. Nel campo password scrivere 'postgres'
 
 NB: tutti i campi sono da completare senza apici
 
@@ -54,8 +48,9 @@ Per eseguire tramite linea di comando utilizzate le seguenti credenziali:
 > port: 5432
 
 ## Condividiere file tra il Docker e il File System host
-Dopo l'installazione tramite il file setup.sh è possibile trasferire file tra host e docker tramite la cartella nel file system host situata nella locazione: ./postgresFOLDER e ./pgadminFOLDER
+Per condividere file sql, file di configurazione e dump della base di dati è possibile utilizzare la cartella  ./postgresFOLDER 
 
+## Eseguire query tramite pgadmin4
 È possibile eseguire query o file sql tramite l'interfaccia grafica di pgadmin4 con l'utilizzo del suo query editor.
 
 
