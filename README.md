@@ -17,6 +17,7 @@ Queste istruzioni permetteranno di installare Docker, e il container e di creare
 ```sh
 $ docker-compose up -d 
 ``` 
+### Configurazione pgadmin4
 6. Eseguire l'accesso tramite il browser all'indirizzo localhost:5000
 7. Nella dashboard cliccare su 'Add new server'
 8. Nella tab 'General' nel campo Name scrivere 'postgres' 
