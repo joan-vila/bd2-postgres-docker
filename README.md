@@ -47,7 +47,6 @@ Si rinvia alla documentazione di Docker per gli usi più avanzati.
 7. Nella dashboard cliccare su 'Add new server'
 8. Nella tab 'General' nel campo Name scrivere 'postgres' 
 9. Cambiare tab e scegliere 'Connection'
-<<<<<<< HEAD
 10. Nel campo Host name / address scrivere: `postgres`
 11. Nel campo port se non presente scrivere: `5432`
 12. Nel campo Maintenance database scrivere: `postgres`
