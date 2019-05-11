@@ -71,7 +71,7 @@ Si rinvia alla documentazione di Docker per gli usi più avanzati.
 
 Per controllare che tutto sia andato a buon fine: 
 
-* Puntare il proprio browser alla URL [http://localhost:5000] (PGAdmin4);
+* Puntare il proprio browser alla URL http://localhost:5000 (PGAdmin4);
 * Effettuare il login 
 * Assicurarsi che .... ???????
 
