@@ -13,7 +13,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 
 ### Prerequisiti
 1. Una macchina con sistema operativo Linux o MacOS. Attualmente Windows non è supportato.
-2. Bisogna avere i permessi di ***root*** e avere disponibili le porte 5000 (PGAdmin4) e 5432 (PostgreSQL). (Le porte esposte dai container verso la macchina host possono essere modificate editando il file `docker-compose.yml`).
+2. Bisogna avere i permessi di ***root*** e avere disponibili le porte 5000 (PGAdmin4) e 5432 (PostgreSQL). (Le porte esposte dai container verso la macchina host possono essere modificate editando il file `.env`).
 3. [Docker](https://www.docker.com/), docker-compose e git installati. Per la loro installazione, si seguano le istruzioni in base al proprio sistema operativo.
 
 ### Installazione ed avviamento tramite docker-compose
@@ -71,7 +71,7 @@ Si rinvia alla documentazione di Docker per gli usi più avanzati.
 
 Per controllare che tutto sia andato a buon fine: 
 
-* Puntare il proprio browser alla URL http://localhost:5000 (PGAdmin4);
+* Puntare il proprio browser alla URL http://localhost:5000 (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`);
 * Effettuare il login 
 * Assicurarsi che .... ???????
 
