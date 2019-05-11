@@ -24,7 +24,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
     ```
 3. Scaricare questo repository nella directory corrente mediante il comando:
     ```sh
-       $ git clone https://bitbucket.org/mclab/bd2.git # Da testare
+       $ git clone https://bitbucket.org/mclab/bd2.git
     ```
 
 4. Avviare il docker container:
