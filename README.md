@@ -58,13 +58,13 @@ Si rinvia alla documentazione di Docker per gli usi più avanzati.
 
 #### Credenziali PGAdmin4:
 
-* user: admin@pgadmin.org
-* password: admin
+* user: `admin@pgadmin.org`
+* password: `admin`
 
 #### Credenziali PostgreSQL:
 
-* user: postgres
-* password: postgres
+* user: `postgres`
+* password: `postgres`
 
 
 ## Esecuzione dei test
