@@ -45,6 +45,7 @@ In caso PGAdmin4 non dovesse rispondere, fare riferimento alla sezione "Esecuzio
 12. Nel campo Maintenance database scrivere: `postgres`
 13. Nel campo username scrivere `postgres`
 13. Nel campo password scrivere: `postgres`
+13. Spuntare la casella "Save password"
 
 ## Credenziali
 I container sono già configurati con le seguenti credenziali.
