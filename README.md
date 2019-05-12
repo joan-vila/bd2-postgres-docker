@@ -23,6 +23,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
     ```sh
        $ cd "$BASE_DIR"
     ```
+
 3. Scaricare questo repository nella directory corrente mediante il comando:
 
     ```sh
@@ -34,6 +35,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
     ```sh
        $ docker-compose up -d 
     ``` 
+
 Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di PostgreSQL e PGAdmin4 e avvierà i due server. 
 
 5. Per fermare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
@@ -54,6 +56,7 @@ Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di 
        $ docker-compose down
        $ docker-compose up -d
     ``` 
+    
 I dati (ad es., il contenuto dei propri database) resteranno salvati nella cartella $BASE_DIR.
 Ai successivi avvii, docker utilizzerà le immagini dei container PostgreSQL e di PGAdmin4 scaricate in precedenza.
 
