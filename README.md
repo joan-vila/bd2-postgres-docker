@@ -22,9 +22,10 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 
         cd "$BASE_DIR"
 
-3. Scaricare questo repository nella directory corrente mediante il comando:
-
-        git clone https://bitbucket.org/mclab/bd2.git
+3. Scaricare questo repository nella directory corrente. Per scoprire il comando da utilizzare:
+    1. cliccare il pulsante "Clone" in alto in questa pagina; 
+    2. scegliere il metodo "https" dal menu, copiare il comando mostrato (`git clone https://...`);
+    3. incollare il comando nella shell aperta.
 
 4. Avviare il docker container:
 
