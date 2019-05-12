@@ -68,7 +68,7 @@ Per controllare che tutto sia andato a buon fine:
 
         docker container ls -a
         
-1. Puntare il proprio browser alla URL http://localhost:5000 (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`) ed assicurarsi che venga correttamente caricata la pagina di login di PGAdmin4.
+1. Puntare il proprio browser alla URL <http://localhost:5000> (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`) ed assicurarsi che venga correttamente caricata la pagina di login di PGAdmin4.
 
 1. Effettuare il login in PGAdmin4 e assicurarsi che vi sia il server di postgres sotto il menu Servers nella barra laterale sinistra. Se così non fosse, ricontrollare i passi nella sezione "Configurazione PGAdmin4". 
 
