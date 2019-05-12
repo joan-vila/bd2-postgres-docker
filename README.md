@@ -22,17 +22,67 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 
         cd "$BASE_DIR"
 
-
 3. Scaricare questo repository nella directory corrente mediante il comando:
 
         git clone https://bitbucket.org/mclab/bd2.git
-
 
 4. Avviare il docker container:
 
         docker-compose up -d 
 
 Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di PostgreSQL e PGAdmin4 e avvierà i due server. 
+
+
+### Configurazione PGAdmin4
+6. Eseguire l'accesso tramite il browser all'indirizzo <http://localhost:5000> (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`). 
+In caso PGAdmin4 non dovesse rispondere, fare riferimento alla sezione "Esecuzione dei test".
+6. Effettuare il login usando le credenziali riportate nella sezione "Credenziali"
+7. Nella dashboard cliccare su 'Add new server'
+8. Nella tab 'General' nel campo Name scrivere 'postgres' 
+9. Cambiare tab e scegliere 'Connection'
+10. Nel campo Host name / address scrivere: `postgres`
+11. Nel campo port se non presente scrivere: `5432`
+12. Nel campo Maintenance database scrivere: `postgres`
+13. Nel campo username scrivere `postgres`
+13. Nel campo password scrivere: `postgres`
+
+## Credenziali
+I container sono già configurati con le seguenti credenziali.
+
+#### Credenziali PGAdmin4:
+
+* user: `admin@pgadmin.org`
+* password: `admin`
+
+#### Credenziali PostgreSQL:
+
+* user: `postgres`
+* password: `postgres`
+
+
+## Esecuzione dei test
+
+Per controllare che tutto sia andato a buon fine: 
+
+1. Assicurarsi che i container `pgadmin_container` e `postgres_container` siano attivi (nello stato "up") mediante il comando:
+
+        docker container ls -a
+        
+1. Puntare il proprio browser alla URL http://localhost:5000 (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`) ed assicurarsi che venga correttamente caricata la pagina di login di PGAdmin4.
+
+1. Effettuare il login in PGAdmin4 e assicurarsi che vi sia il server di postgres sotto il menu Servers nella barra laterale sinistra. Se così non fosse, ricontrollare i passi nella sezione "Configurazione PGAdmin4". 
+
+## Condividere file tra il Docker e il File System host
+La sottodirectory `postgresData` di `$BASE_DIR` è visibile all'interno del container docker di PostgreSQL.
+Questa directory conterrà i file di configurazione e i database PostgreSQL, che resteranno dunque persistenti anche in caso di interruzione del servizio Docker, o della rimozione dei container.
+
+## Utilizzare PostgreSQL da linea di comando:
+E' possibile avviare il comando `psql` per accedere alla shell di PostgreSQL mediante:
+
+        docker exec -it postgres_container psql -U postgres
+
+
+## Altri utili comandi Docker
 
 5. Per fermare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
 
@@ -51,49 +101,6 @@ I dati (ad es., il contenuto dei propri database) resteranno salvati nella carte
 Ai successivi avvii, docker utilizzerà le immagini dei container PostgreSQL e di PGAdmin4 scaricate in precedenza.
 
 Si rinvia alla documentazione di Docker per gli usi più avanzati.
-
-### Configurazione PGAdmin4
-6. Eseguire l'accesso tramite il browser all'indirizzo [http://localhost:5000]
-7. Nella dashboard cliccare su 'Add new server'
-8. Nella tab 'General' nel campo Name scrivere 'postgres' 
-9. Cambiare tab e scegliere 'Connection'
-10. Nel campo Host name / address scrivere: `postgres`
-11. Nel campo port se non presente scrivere: `5432`
-12. Nel campo Maintenance database scrivere: `postgres`
-13. Nel campo username scrivere `postgres`
-13. Nel campo password scrivere: `postgres`
-
-## Credenziali
-
-#### Credenziali PGAdmin4:
-
-* user: `admin@pgadmin.org`
-* password: `admin`
-
-#### Credenziali PostgreSQL:
-
-* user: `postgres`
-* password: `postgres`
-
-
-## Esecuzione dei test
-
-Per controllare che tutto sia andato a buon fine: 
-
-* Puntare il proprio browser alla URL http://localhost:5000 (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`);
-* Effettuare il login 
-* Assicurarsi che i container siano attivi (UP) e che vi sia il server di postgres sotto il menu Servers nella barra laterale sinistra di PGAdmin4, se così non fosse ricontrollare i passi nella sezione "Configurazione PGAdmin4". Per verificare che i container siano attivi eseguire in una shell il seguente comando e controllare nella colonna "STATUS":
-
-        docker container ls -a
-
-## Condividere file tra il Docker e il File System host
-La sottodirectory `postgresData` di `$BASE_DIR` è visibile all'interno del container docker di PostgreSQL.
-Questa directory conterrà i file di configurazione e i database PostgreSQL, che resteranno dunque persistenti anche in caso di interruzione del servizio Docker, o della rimozione dei container.
-
-## Utilizzare PostgreSQL da linea di comando:
-E' possibile avviare il comando `psql` per accedere alla shell di PostgreSQL mediante:
-
-        docker exec -it postgres_container psql -U postgres
 
 ## Authors
 
