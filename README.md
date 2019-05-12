@@ -19,31 +19,37 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 ### Installazione ed avviamento tramite docker-compose
 1. Aprire una shell
 2. Posizionarsi nella directory dove si vuole installare il tutto (ad es., `$HOME/bd2/`). Da qui in poi, chiameremo questa directory `$BASE_DIR`.
+
     ```sh
        $ cd "$BASE_DIR"
     ```
 3. Scaricare questo repository nella directory corrente mediante il comando:
+
     ```sh
        $ git clone https://bitbucket.org/mclab/bd2.git
     ```
 
 4. Avviare il docker container:
+
     ```sh
        $ docker-compose up -d 
     ``` 
 Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di PostgreSQL e PGAdmin4 e avvierà i due server. 
 
 5. Per fermare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
+
     ```sh
        $ docker-compose stop
     ``` 
 
 5. Per avviare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
+
     ```sh
        $ docker-compose start
     ``` 
     
 5. Per reinstallare i docker container di PostgreSQL e di PGAdmin4 usare il comando:
+
     ```sh
        $ docker-compose down
        $ docker-compose up -d
@@ -83,7 +89,8 @@ Per controllare che tutto sia andato a buon fine:
 
 * Puntare il proprio browser alla URL http://localhost:5000 (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`);
 * Effettuare il login 
-* Assicurarsi che i container siano attivi (UP) e che vi sia il server di postgres sotto il menu Servers nella barra laterale sinistra di PGAdmin4, se così non fosse ricontrollare i passi nella sezione "Configurazione PGAdmin4". Per verificare che i container siano attivi eseguire in una shell il seguente comando e controllare nella colonna "STATUS:
+* Assicurarsi che i container siano attivi (UP) e che vi sia il server di postgres sotto il menu Servers nella barra laterale sinistra di PGAdmin4, se così non fosse ricontrollare i passi nella sezione "Configurazione PGAdmin4". Per verificare che i container siano attivi eseguire in una shell il seguente comando e controllare nella colonna "STATUS":
+
      ```sh
        $ docker container ls -a
     ``` 
