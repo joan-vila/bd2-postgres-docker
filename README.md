@@ -20,9 +20,9 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 1. Aprire una shell
 2. Posizionarsi nella directory dove si vuole installare il tutto (ad es., `$HOME/bd2/`). Da qui in poi, chiameremo questa directory `$BASE_DIR`.
 
-```sh
-cd "$BASE_DIR"
-```
+      ```sh
+      cd "$BASE_DIR"
+      ```
 
 3. Scaricare questo repository nella directory corrente mediante il comando:
 
