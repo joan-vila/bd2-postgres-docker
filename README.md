@@ -33,6 +33,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 
 Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di PostgreSQL e PGAdmin4 e avvierà i due server. 
 
+In caso di errori durante l'esecuzione di PGAdmin4 assicurarsi di avere i permessi sulla cartella del repository clonato tramite il comando `sudo chmod 777 -R .`, chiudendo eventuali container attivi con `docker-compose down` e riavviandoli con `docker-compose up -d` 
 
 ### Configurazione PGAdmin4
 6. Eseguire l'accesso tramite il browser all'indirizzo <http://localhost:5000> (la propria installazione di PGAdmin4; ovviamente usare il numero di porta corretto se modificato nel file `.env`). 
