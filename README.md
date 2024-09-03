@@ -29,7 +29,7 @@ Queste istruzioni permetteranno di installare Docker, i container e di creare un
 
 4. Avviare il docker container:
 
-        docker-compose up -d 
+        docker compose up -d 
 
 Alla prima esecuzione, il comando scaricherà da Internet le ultime versioni di PostgreSQL e PGAdmin4 e avvierà i due server. 
 
@@ -89,21 +89,24 @@ E' possibile avviare il comando `psql` per accedere alla shell di PostgreSQL med
 
 5. Per fermare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
 
-        docker-compose stop
+        docker compose stop
 
 5. Per avviare l'esecuzione di PostgreSQL e di PGAdmin4 usare il comando:
 
-        docker-compose start
+        docker compose start
     
 5. Per reinstallare i docker container di PostgreSQL e di PGAdmin4 usare il comando:
 
-        docker-compose down
-        docker-compose up -d
+        docker compose down
+        docker compose up -d
 
 I dati (ad es., il contenuto dei propri database) resteranno salvati nella cartella $BASE_DIR.
 Ai successivi avvii, docker utilizzerà le immagini dei container PostgreSQL e di PGAdmin4 scaricate in precedenza.
 
 Si rinvia alla documentazione di Docker per gli usi più avanzati.
+
+## Contact
+* **Marco Esposito** (LASTNAME AT di.uniroma1.it)
 
 ## Authors
 
